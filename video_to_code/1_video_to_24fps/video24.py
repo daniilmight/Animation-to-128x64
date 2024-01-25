@@ -38,7 +38,6 @@ def change_frame_rate(input_video, output_video, target_frame_rate=24):
 
     print(f"Видео создано с частотой кадров {target_frame_rate}: {output_video}")
 
-# Пример использования с относительными путями
 input_video = "1_video_to_24fps/video.mp4"
 output_video = "1_video_to_24fps/video_24fps.mp4"
 change_frame_rate(input_video, output_video, target_frame_rate=24)

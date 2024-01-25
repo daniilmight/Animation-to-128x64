@@ -37,7 +37,6 @@ def images_to_video(input_folder, output_video):
 
     print(f"Видео создано: {output_video}")
 
-# Пример использования с относительными путями
 input_folder = "x_text_to_image/reconstructed_images"
 output_video = "x_image_to_video/output_video.mp4"
 images_to_video(input_folder, output_video)

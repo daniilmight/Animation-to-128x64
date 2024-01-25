@@ -49,7 +49,6 @@ def analyze_frames(input_folder, output_file):
 
     print(f"Анализ {num_frames} кадров завершен. Результаты сохранены в {output_file}")
 
-# Пример использования с относительными путями
 input_folder = "2_video24_to_image/images"
 output_file = "3_image_to_text/output.txt"
 analyze_frames(input_folder, output_file)

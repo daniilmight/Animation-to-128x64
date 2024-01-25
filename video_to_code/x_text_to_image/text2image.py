@@ -36,7 +36,6 @@ def create_images(input_file, output_folder):
 
     print(f"Изображения созданы в {output_folder}")
 
-# Пример использования с относительными путями
 input_file = "3_image_to_text/output.txt"
 output_folder = "x_text_to_image/reconstructed_images"
 create_images(input_file, output_folder)

@@ -37,7 +37,6 @@ def split_frames(video_path, output_folder):
 
     print(f"Кадры сохранены в {output_folder}")
 
-# Пример использования с относительными путями
 video_path = "1_video_to_24fps/video_24fps.mp4"
 output_folder = "2_video24_to_image/images"
 split_frames(video_path, output_folder)
