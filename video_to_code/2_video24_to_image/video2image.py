@@ -13,6 +13,10 @@ def split_frames(video_path, output_folder):
     video_path = os.path.join(project_directory, video_path)
     output_folder = os.path.join(project_directory, output_folder)
 
+    # Проверяем, существует ли папка "images", и создаем ее, если нет
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     # Открываем видеофайл
     cap = cv2.VideoCapture(video_path)
 

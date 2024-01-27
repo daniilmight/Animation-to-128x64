@@ -14,6 +14,10 @@ def create_images(input_file, output_folder):
     input_file = os.path.join(project_directory, input_file)
     output_folder = os.path.join(project_directory, output_folder)
 
+    # Проверяем, существует ли папка "reconstructed_images", и создаем ее, если нет
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
     # Читаем данные из txt файла
     with open(input_file, 'r') as f:
         lines = f.readlines()

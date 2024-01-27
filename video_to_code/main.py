@@ -4,7 +4,6 @@ import subprocess
 import os
 import shutil
 from PIL import Image, ImageTk
-import imageio
 import cv2
 
 
