@@ -24,7 +24,8 @@ def images_to_video(input_folder, output_video):
     height, width, layers = first_image.shape
 
     # Создаем объект VideoWriter с частотой кадров 24
-    video_writer = cv2.VideoWriter(output_video, cv2.VideoWriter_fourcc(*'mp4v'), 24, (width, height))
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')  # Используйте 'XVID' для AVI
+    video_writer = cv2.VideoWriter(output_video, fourcc, 24, (width, height))
 
     # Добавляем изображения в видео
     for image_file in image_files:
@@ -38,5 +39,5 @@ def images_to_video(input_folder, output_video):
     print(f"Видео создано: {output_video}")
 
 input_folder = "x_text_to_image/reconstructed_images"
-output_video = "x_image_to_video/output_video.mp4"
+output_video = "x_image_to_video/output_video.avi"
 images_to_video(input_folder, output_video)

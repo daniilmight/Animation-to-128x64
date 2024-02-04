@@ -1,11 +1,17 @@
 import cv2
 import os
+import sys
 
 def split_frames(video_path, output_folder):
+    # Считываем путь к видео и папку для сохранения из командной строки
+    if len(sys.argv) > 2:
+        video_path = sys.argv[1]
+        output_folder = sys.argv[2]
+
     # Получаем текущий путь к скрипту
     script_path = os.path.abspath(__file__)
 
-    # Переходим в родительский каталог (video_to_01)
+    # Переходим в родительский каталог
     project_directory = os.path.dirname(os.path.dirname(script_path))
     os.chdir(project_directory)
 
@@ -13,7 +19,7 @@ def split_frames(video_path, output_folder):
     video_path = os.path.join(project_directory, video_path)
     output_folder = os.path.join(project_directory, output_folder)
 
-    # Проверяем, существует ли папка "images", и создаем ее, если нет
+    # Проверяем, существует ли папка, и создаем ее, если нет
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -41,6 +47,12 @@ def split_frames(video_path, output_folder):
 
     print(f"Кадры сохранены в {output_folder}")
 
-video_path = "1_video_to_24fps/video_24fps.mp4"
-output_folder = "2_video24_to_image/images"
-split_frames(video_path, output_folder)
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python video2image.py <video_path> <output_folder>")
+        sys.exit(1)
+
+    video_path = sys.argv[1]
+    output_folder = sys.argv[2]
+
+    split_frames(video_path, output_folder)
