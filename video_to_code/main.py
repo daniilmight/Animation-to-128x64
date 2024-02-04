@@ -45,7 +45,7 @@ class VideoProcessingApp(QMainWindow):
         self.setCentralWidget(main_widget)
 
         # Инициализация переменной для папки вывода
-        self.output_folder_for_second_stage = "output_frames_folder"
+        self.output_folder_for_second_stage = "2_video24_to_image\images"
 
     def browse_video(self):
         file_dialog = QFileDialog()
