@@ -6,11 +6,9 @@
 
 Установите необходимые зависимости, выполнив команду:
 
-
-    ```bash
-    pip install PyQt5 opencv-python
-    ```
-
+```bash
+pip install PyQt5 opencv-python
+```
 
 ## Использование
 
