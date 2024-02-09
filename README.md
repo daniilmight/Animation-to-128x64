@@ -10,7 +10,6 @@
     pip install PyQt5 opencv-python
     ```
 
-
 ## Использование
 
 1. Запустите приложение `main.py`.
